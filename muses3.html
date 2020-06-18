@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/bootstrap-3.4.1-dist/css/personal-css.css">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/ico" href="/IMG/favicon.ico">
+
+    <!--  Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light"
+        style="background-image: url(/IMG/banner.png); background-color: #f36639; height: 100%; font-weight: bolder; font-size: larger;">
+        <a class="navbar-brand" href="#">
+            <img src="/IMG/logo2alpha.png" style="height: 100px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/Pages/muses3.html">Character Creator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/plots.html">Plot Creator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/chatclient.html">Roleplay Room</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://rpgcharactertracker.freeforums.net/">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/about.html">About Us</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav my-2 my-lg-0">
+
+                <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center" style="background-image: url(/IMG/banner.png);">
+                                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mx-3">
+                                <div class="md-form mb-5">
+                                    <i class="fas fa-envelope prefix grey-text"></i>
+                                    <input type="email" id="defaultForm-email" class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+                                </div>
+
+                                <div class="md-form mb-4">
+                                    <i class="fas fa-lock prefix grey-text"></i>
+                                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                                    <label data-error="wrong" data-success="right"
+                                        for="defaultForm-pass">Password</label>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button class="btn btn-default">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="" class="nav-link active" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+                </div>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Sign Up</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <title>Muse Creator | RPG Character Tracker</title>
+</head>
+
+<body>
+    <!--AD Rotator-->
+    <div class="adspace">AD SPACE</div>
+
+    <!--Main Body-->
+
+    <div class="fill-form">
+        <h1>Muse Creator</h1>
+        <p>A basic character creator to help you create your characters.</p>
+
+        <br>
+
+        <hr class="border-dark">
+
+        <div class="news">
+
+            <div class="createTitle">
+                <h3>Create a New Muse:</h3>
+                <hr class="border-dark">
+            </div>
+
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="txtName">Name:</label>
+
+                        <input type="text" id="txtName" class="form-control" required>
+
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtAge">Age:</label>
+                        <input type="number" id="txtAge" class="form-control">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtBirthday">Birthday:</label>
+                        <input type="date" id="txtBirthday" class="form-control">
+                    </div>
+
+
+
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="txtGender">Pronouns:</label>
+                        <select name="txtGender" id="txtGender" class="form-control">
+                            <option selected value="">--Choose a Pronoun--</option>
+                            <option value="none">None</option>
+                            <option value="male">Masculine</option>
+                            <option value="female">Feminine</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="other">Other</option>
+                            <option value="shrug" title="¯\_(ツ)_/¯">¯\_(ツ)_/¯</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="txtSexuality">Sexuality:</label>
+                        <select name="txtSexuality" id="txtSexuality" class="form-control">
+                            <option selected value="">--Choose an Orientation--</option>
+                            <option value="Heterosexual" title="attracted to the opposite sex/gender">
+                                Heterosexual</option>
+                            <option value="Homosexual" title="attracted to the same sex/gender">Homosexual
+                            </option>
+                            <option value="Demisexual"
+                                title="sexual attraction only under specific circumstances, such as after building a romantic or emotional relationship with a person.">
+                                Demisexual</option>
+                            <option value="Pansexual"
+                                title=" sexual, romantic, or emotional attraction to any person, regardless of that person’s gender, sex, or sexuality">
+                                Pansexual</option>
+                            <option value="Asexual"
+                                title="the lack of sexaul attraction or those who do not wish to engage in sexual activities with a romantic partner">
+                                Asexual</option>
+                            <option value="Bisexual" title="attracted to more than one gender">Bisexual
+                            </option>
+                            <option value="Fluid" title="attraction that changes per situation">Fluid
+                            </option>
+                            <option value="Gray" title="feels that they don't fig in with any label">Gray
+                            </option>
+                            <option value="Questioning" title="currently questioning their sexuality">
+                                Questioning</option>
+                            <option value="Polysexual"
+                                title="interested in being in a relationship with more than one partner">
+                                Polysexual</option>
+                            <option value="Other" title="Other">Other</option>
+                            <option value="shrug" title="¯\_(ツ)_/¯">¯\_(ツ)_/¯</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtSpecies">Species/Race:</label>
+                        <input type="text" id="txtSpecies" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="txtHometown">Hometown:</label>
+                        <input type="text" id="txtHometown" class="form-control">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtClass">Occupation/Class:</label>
+                        <input type="text" id="txtClass" class="form-control">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtAlignment">Alignment:</label>
+                        <select name="txtAlignment" id="txtAlignment" class="form-control">
+                            <option selected value="">--Choose an Alignment--</option>
+                            <option value="lawfulGood">Lawful Good</option>
+                            <option value="neutralGood">Neutral Good</option>
+                            <option value="chaoticGood">Chaotic Good</option>
+                            <option value="lawfulNeutral">Lawful Neutral</option>
+                            <option value="trueNeutral">True Neutral</option>
+                            <option value="chaoticNeutral">Chaotic Neutral</option>
+                            <option value="lawfulEvil">Lawful Evil</option>
+                            <option value="neutralEvil">Neutral Evil</option>
+                            <option value="chaoticEvil">Chaotic Evil</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="txtLevel">Level</label>
+                        <input type="number" id="txtLevel" class="form-control">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtExperience">Experience Until Next Level:</label>
+                        <input type="range" id="txtExperience" name="txtExperience" min="0%" max="99%"
+                            class="form-control">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="txtSignature">Signature Weapon / Item:</label>
+                        <input type="text" id="txtSignature" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <label for="txtAbilities">Abilities:</label>
+                    <input type="text" id="txtAbilities" class="form-control"
+                        placeholder="Seperate abilities with spaces">
+                </div>
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <label for="txtTraits">Traits:</label>
+                    <input type="text" id="txtTraits" class="form-control" placeholder="Seperate traits with spaces">
+                </div>
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <label for="txtLikes">Likes:</label>
+                    <input type="text" id="txtLikes" class="form-control" placeholder="Seperate likes with spaces">
+                </div>
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <label for="txtDislikes">Dislikes:</label>
+                    <input type="text" id="txtDislikes" class="form-control"
+                        placeholder="Seperate dislikes with spaces">
+                </div>
+
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <label for="txtBlog">Blog / Url:</label>
+                    <input type="text" id="txtBlog" class="form-control"
+                        placeholder="If your character is online, put their url here">
+                </div>
+
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <label for="txtDescription">Description:</label>
+                    <textarea id="txtDescription" class="form-control"></textarea>
+                </div>
+
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <div class="butt-cent">
+                        <input type="button" id="saveButton" value="Save Muse" onclick="saveFile()"
+                            class="btn btn-primary">
+                        <input type="reset" id="reset" value="Reset" class="btn btn-primary">
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!--End Main Body-->
+
+
+
+
+    <!--AD Rotator-->
+    <div class="adspace">AD SPACE</div>
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <img src="/IMG/logo.png" style="max-height: 150px;">
+
+                    <h3>Orionis Creations</h3>
+                    <p>
+                        Copywrite Orionis Creations, 2020
+                        <br>
+                        Applications Development, Advanced Web Technologies Project
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class=" clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Sitemap</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/muses2.html">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/plots.html">Plots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/chatclient.html">Download</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://rpgcharactertracker.freeforums.net/">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/about.html">About Us</a>
+                        </li>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Other Resources</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/muses2.html">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/plots.html">Plots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/chatclient.html">Roleplayers Room</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://rpgcharactertracker.freeforums.net/">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/about.html">About Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+
+
+        </footer>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+<script>
+    let saveFile = () => {
+        const NAME = document.getElementById('txtName');
+        const AGE = document.getElementById('txtAge');
+        const BIRTHDAY = document.getElementById('txtBirthday');
+        const GENDER = document.getElementById('txtGender');
+        const SEXUALITY = document.getElementById('txtSexuality');
+        const SPECIES = document.getElementById('txtSpecies');
+        const HOMETOWN = document.getElementById('txtHometown');
+        const CLASS = document.getElementById('txtClass');
+        const ALIGNMENT = document.getElementById('txtAlignment');
+        const LEVEL = document.getElementById('txtLevel');
+        const EXPERIENCE = document.getElementById('txtExperience');
+        const SIGNATURE = document.getElementById('txtSignature');
+        const ABILITIES = document.getElementById('txtAbilities');
+        const TRAITS = document.getElementById('txtTraits');
+        const LIKES = document.getElementById('txtLikes');
+        const DISLIKES = document.getElementById('txtDislikes');
+        const BLOG = document.getElementById('txtBlog');
+        const DESCRIPTION = document.getElementById('txtDescription');
+
+        let data =
+            '\r Name: ' + NAME.value + ' \r \n' +
+            'Age: ' + AGE.value + ' \r \n' +
+            'Birthday: ' + BIRTHDAY.value + ' \r \n' +
+            'Pronouns: ' + GENDER.value + ' \r \n' +
+            'Sexality: ' + SEXUALITY.value + ' \r \n' +
+            'Species/Race: ' + SPECIES.value + ' \r \n' +
+            'Hometown: ' + HOMETOWN.value + ' \r \n' +
+            'Occupation/Class: ' + CLASS.value + ' \r \n' +
+            'Alignment: ' + ALIGNMENT.value + ' \r \n' +
+            'Level: ' + LEVEL.value + ' \r \n' +
+            'Experience to Next Level: ' + EXPERIENCE.value + ' \r \n' +
+            'Traits: ' + TRAITS.value + ' \r \n' +
+            'Likes:' + LIKES.value + ' \r \n' +
+            'Dislikes: ' + DISLIKES.value + ' \r \n' +
+            'Blog / Url: ' + BLOG.value + ' \r \n' +
+            'Description: ' + DESCRIPTION.value
+
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'newMuse.txt';
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        } else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click();
+    }
+</script>
+
+</html>

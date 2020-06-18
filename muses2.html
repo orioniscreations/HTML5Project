@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/bootstrap-3.4.1-dist/css/personal-css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="/JS/muses.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $(".hidden").hide();
+            });
+            $("#show").click(function () {
+                $(".hidden").show();
+            });
+        });
+    </script>
+
+    <script>
+
+        function updateFC(fc) {
+            document.getElementById("fc").innerHTML = fc;
+        }
+
+        function updateName(name) {
+            document.getElementById("name").innerHTML = name;
+        }
+
+        function updateAge(age) {
+            document.getElementById("age").innerHTML = age;
+        }
+
+        function updateLevel(level) {
+            document.getElementById("level").innerHTML = level;
+        }
+
+        function updatePronouns(pronouns) {
+            document.getElementById("pronouns").innerHTML = pronouns;
+        }
+
+        function updateLocation(location) {
+            document.getElementById("location").innerHTML = location;
+        }
+        function updateAbilities(abilities) {
+            document.getElementById("abilities").innerHTML = abilities;
+        }
+
+        function updateDescription(description) {
+            document.getElementById("description").innerHTML = description;
+        }
+
+
+    </script>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/ico" href="/IMG/favicon.ico">
+
+    <!--  Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light"
+        style="background-image: url(/IMG/banner.png); background-color: #f36639; height: 100%; font-weight: bolder; font-size: larger;">
+        <a class="navbar-brand" href="#">
+            <img src="/IMG/logo2alpha.png" style="height: 100px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Pages/muses.html">Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/plots.html">Plots</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/chatclient.html">Download</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://rpgcharactertracker.freeforums.net/">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/about.html">About Us</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav my-2 my-lg-0">
+
+                <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center" style="background-image: url(/IMG/banner.png);">
+                                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mx-3">
+                                <div class="md-form mb-5">
+                                    <i class="fas fa-envelope prefix grey-text"></i>
+                                    <input type="email" id="defaultForm-email" class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+                                </div>
+
+                                <div class="md-form mb-4">
+                                    <i class="fas fa-lock prefix grey-text"></i>
+                                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                                    <label data-error="wrong" data-success="right"
+                                        for="defaultForm-pass">Password</label>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button class="btn btn-default">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="" class="nav-link active" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+                </div>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Sign Up</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <title>My Muses | RPG Character Tracker</title>
+</head>
+
+<body>
+    <!--AD Rotator-->
+    <div class="adspace">AD SPACE</div>
+
+    <!--Main Body-->
+
+    <div class="fill-form">
+
+        <h1>My Muses</h1>
+        <p>Store Information about your Characters and Muses!</p>
+
+
+        <br>
+
+
+
+        <hr class="border-dark" />
+
+        <div class="hidden">
+
+
+            <div class="news">
+
+
+
+
+
+                <div class="container-fluid">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="icon">FC:</label>
+                                <input type="file" value="" onchange="updateFC(this.value);">
+                                <br>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <div class="fill-form">
+
+
+                                    <div id="getName">
+                                        Name:<input type="text" value="" onchange="updateName(this.value);"
+                                            class="form-control" required />
+
+                                    </div>
+                                    <div id="getLevel">
+                                        Level: <input type="number" value="" onchange="updateLevel(this.value);"
+                                            class="form-control" />
+                                    </div>
+                                    <div id="getAge">
+                                        Age:<input type="number" value="" onchange="updateAge(this.value);"
+                                            class="form-control" />
+                                    </div>
+
+                                    <div id="getPronouns">
+                                        Pronouns:<input type="text" value="" onchange="updatePronouns(this.value);"
+                                            class="form-control" />
+
+                                    </div>
+
+                                    <div id="getLocation">
+                                        Home Town:<input type="text" value="" onchange="updateLocation(this.value);"
+                                            class="form-control" />
+
+                                    </div>
+
+                                    <div id="getAbilities">
+                                        Abilities:<input type="text" value="" onchange="updateAbilities(this.value);"
+                                            class="form-control" placeholder="Seperate Abilities with Spaces" /
+                                            style="width: 514px;">
+
+                                    </div>
+
+                                    <div id="getDescription">
+                                        Description:
+                                        <textarea onchange="updateDescription(this.value);"
+                                            style="width: 514px; height: 300px;" class="form-control"></textarea>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <div class="fill-form">
+
+                                    <label for="blogurl">Url:</label>
+                                    <input type="url" id="blogurl" class="form-control"
+                                        placeholder="If your character is online, feel free to link it here."
+                                        style="width: 515px;">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <div class="fill-form">
+
+                                    <button class="btn btn-primary btn-sm" onclick="save()">Save</button>
+                                    <input type="reset" id="reset" class="btn btn-primary btn-sm">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!--OUTPUT-->
+
+
+
+                    </form>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="butts">
+            <button id="hide" class="btn btn-primary btn-sm">Hide</button>
+            <button id="show" class="btn btn-primary btn-sm">Show</button>
+        </div>
+
+
+        <label>Name:</label>
+        <div id="name"></div>
+        <br />
+        <label>Level:</label>
+        <div id="level"></div>
+        <br>
+        <label>Age:</label>
+        <div id="age"></div>
+        <br>
+        <label>Pronouns:</label>
+        <div id="pronouns"></div>
+        <br>
+        <label>Home Town:</label>
+        <div id="location"></div>
+        <br>
+        <label>Abilities:</label>
+        <div id="abilities"></div>
+        <br>
+        <label>Description:</label>
+        <div id="description"></div>
+
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <!--End Main Body-->
+
+
+
+
+    <!--AD Rotator-->
+    <div class="adspace">AD SPACE</div>
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <img src="/IMG/logo.png" style="max-height: 150px;">
+
+                    <h3>Orionis Creations</h3>
+                    <p>
+                        Copywrite Orionis Creations, 2020
+                        <br>
+                        Applications Development, Advanced Web Technologies Project
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class=" clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Sitemap</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/muses.html">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/plots.html">Plots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/chatclient.html">Download</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://rpgcharactertracker.freeforums.net/">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/about.html">About Us</a>
+                        </li>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Other Resources</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/muses.html">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/plots.html">Plots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/chatclient.html">Download</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://rpgcharactertracker.freeforums.net/">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/about.html">About Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+
+
+        </footer>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+<script>
+
+    var muses = []
+
+
+    // Load muses
+    if (localStorage["listOfMuses"]) {
+        muses = JSON.parse(localStorage["listOfMuses"])
+    }
+
+
+
+    function save() {
+        // Add muse
+        muses.push({
+            fc: "",
+            name: "",
+            level: 24,
+            age: 24,
+            pronouns: "",
+            location: "",
+            abilities: "",
+            description: ""
+        })
+        // Saves to localStorage
+        localStorage.setItem("listOfMuses", JSON.stringify(muses))
+    }
+
+
+
+
+
+
+</script>
+
+
+</html>

@@ -3,12 +3,12 @@
     "description": "description",
     "authors": "author",
     "version": "1.0.0",
-    "main": "chatter.js",
+    "main": "index.js",
     "scripts": {
         "devStart": "nodemon server.js"
     },
     "dependencies": {
-        "socket.io": "^2.3.0"
+        "socket.io": "2.3.0"
     },
     "devDependencies": {
         "nodemon": "2.0.4"

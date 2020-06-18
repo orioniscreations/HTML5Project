@@ -1,0 +1,68 @@
+body {
+    padding: 0;
+    margin: 0;
+  
+
+    background-image: url(/Pages/chatter2/IMG/wood-colour-pattern-dark-dark.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#message-container {
+    
+    max-width: 1200px;
+}
+
+#message-container div {
+    background-color: #5555;
+    padding: 5px;
+}
+
+#message-container div:nth-child(2n) {
+    background-color: transparent;
+  
+}
+
+#send-icon{
+    position: fixed;
+    padding-bottom: 0px;
+    bottom: 70px;
+    background-color:transparent;
+    margin-right: auto;
+    margin-left: auto;
+    
+    max-width: 1200px;
+    width: 80%;
+    display: inline-block;
+    text-align: cen;
+}
+
+#send-container {
+    position: fixed;
+    padding-bottom: 30px;
+    bottom: 0;
+    background-color: white;
+    
+    max-width: 1200px;
+    width: 80%;
+    display: flex;
+}
+
+#message-input {
+    flex-grow: 1;
+}
+
+.chat-back{
+    background-image: url(/Pages/chatter2/IMG/Paper\ Background.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 80%;
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    justify-content: center;
+}
